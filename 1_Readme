@@ -1,10 +1,14 @@
 In the first File named :
 'Missing_number(CSES)_1' 
 
-I used **"Hashing"** a viable and most important concept in the field of **CP and DSA**.
-Applying Hashing came just as a random thought in my mind, since the CONSTRAINTS were smaller (~1e5).
+**Logic behind:**
+No matter whichever is the missing number, subtracting the elements would automatically adjust the required number.
+All HAIL THE MIGHT OF MATHEMATICS!!.
 
-Here I introduced a global array named as 'hsh[200000]' (size : 2 * 1e5).
+I used **Hashing**, a viable and most important concept in the field of **CP and DSA**.
+Applying Hashing just came as a random thought in my mind, since the CONSTRAINTS were smaller (~1e5).
+
+Here, I introduced a global array named as 'hsh[200000]' (size : 2 * 1e5).
 hsh[0] = 1; and hsh[i] = hsh[i-1] + 1; were my baseline conditions for my global array 
 (_coz I don't want to start my array from 0 🙂_).
 As usual took input of 'n', size of the vector/array and the elements of vector/array from the user side; sort the vector/array; push_back/push_front '0' to it.
@@ -12,12 +16,12 @@ After all the inputs and sorting comes the solution part.
 ll missingNumber = 0, initialized a variable with '0' as starting value.
 missingNumber += (v[i] - hsh[i]), subtracted each element of both the array/vector. 
 And finally taking the absolute value of the 'sum'.
-**Logic behind:** no matter whichever is the missing number, subtracting the elements would automatically adjust the required number, All HAIL THE HIGHNESS OF MATHEMATICS!!.
 
-**Example:** n = 5, vector given = {2, 3, 5, 1};
+**Example:** 
+n = 5; vector/array given = {2, 3, 5, 1}.
 In accordance with my solution:
- hsh[5] = {1, 2, 3, 4, 5, 0, 0,...} with the logic. ( hsh[0] = 1; and hsh[i] = hsh[i-1] + 1; )
-Sorting the vector given and adding '0' at the last gives us = {1, 2, 3, 5, 0}.
+ hsh[5] = {1, 2, 3, 4, 5, 0, 0,...} with the logic. ( hsh[0] = 1; and hsh[i] = hsh[i-1] + 1; ) & (rest elements of the hash array will be 0)
+Sorting the vector given and pushing '0' at the end provides us : {1, 2, 3, 5, 0}.
 SUBTRACTING THE ELEMENTS: sum = sum(initially assigned '0') + (1-1) + (2-2) + (3-3) + (4-5) + (5-0) = -4.
 Taking absolute value of sum = abs(sum) = 4.
 ANSWER!
