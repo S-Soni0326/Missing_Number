@@ -1,0 +1,21 @@
+In the Second File named :
+'Missing_number(CSES)_2' 
+
+**Logic behind:** 
+Sum of N natural numbers - sum of the elements of the vector/array given (through user) = required/missing number
+All HAIL THE HIGHNESS OF MATHEMATICS!!.
+
+Sum of 'N' first natural numbers:
+As usual took input of 'n', size of the vector/array and the elements of vector/array from the user side; sort the vector/array; push_back/push_front '0' to it.
+After all the inputs and sorting comes the solution part.
+SUM OF N NATURAL NUMBERS = (N * (N + 1)) / 2.
+Then taking the sum of the elements of the vector/array given.
+Subtracting both these sums will provide us with solution requires.
+
+**Example:** 
+n = 5; vector/array given = {2, 3, 5, 1}.
+In accordance with my solution:
+SUM OF N (here 5) NATURAL NUMBERS = (N * (N + 1)) / 2 = 15. ( net sum )
+SUM OF THE ELEMENTS: sum = 2 + 3 + 5 + 1 = 11.
+Taking Difference value of sum and net sum = 15 - 11 = 4.
+ANSWER!
